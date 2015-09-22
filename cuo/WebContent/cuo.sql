@@ -6,9 +6,14 @@ CREATE TABLE board(
 	postReadcount NUMBER DEFAULT 0,
 	postWriter VARCHAR2(12),
 	postRegistTime TIMESTAMP(6) NOT NULL,
+	ref NUMBER,
+	re_step NUMBER,
+	re_level NUMBER,
 	id VARCHAR2(20) PRIMARY KEY,
 	FOREIGN KEY (id) REFERENCES member (id) on delete cascade
 )
+
+drop table board;
 drop sequence board_seq;
 CREATE SEQUENCE board_seq;
 
@@ -45,6 +50,11 @@ CREATE TABLE message(
 )
 
 drop TABLE message;
+drop TABLE menu;
+drop TABLE comments;
+drop TABLE board;
+drop TABLE zipcode;
+drop TABLE member;
 
 CREATE TABLE member(
 	id VARCHAR2(20) PRIMARY KEY,
@@ -58,8 +68,10 @@ CREATE TABLE member(
 	email VARCHAR2(30),
 	birthday DATE,
 	gender CHAR(1),
-	homepage VARCHAR2(30)
+	homepage VARCHAR2(30),
+	grade VARCHAR2(12)
 )
+
 
 CREATE TABLE zipcode(
 	num NUMBER PRIMARY KEY,
