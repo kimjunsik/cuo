@@ -9,6 +9,7 @@ CREATE TABLE board(
 	ref NUMBER,
 	re_step NUMBER,
 	re_level NUMBER,
+	ip VARCHAR2(20),
 	id VARCHAR2(20) PRIMARY KEY,
 	FOREIGN KEY (id) REFERENCES member (id) on delete cascade
 )
