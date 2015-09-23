@@ -54,31 +54,13 @@ drop TABLE message;
 drop TABLE menu;
 drop TABLE comments;
 drop TABLE board;
-drop TABLE zipcode;
 drop TABLE member;
 
 CREATE TABLE member(
 	id VARCHAR2(20) PRIMARY KEY,
 	name VARCHAR2(12),
 	passwd VARCHAR2(12) NOT NULL,
-	zip1 CHAR(3),
-	zip2 CHAR(3),
-	addr1 VARCHAR2(100),
-	addr2 VARCHAR2(50),
-	job VARCHAR2(20),
-	email VARCHAR2(30),
+	addr VARCHAR2(100),
 	birthday DATE,
-	gender CHAR(1),
-	homepage VARCHAR2(30),
 	grade VARCHAR2(12)
-)
-
-
-CREATE TABLE zipcode(
-	num NUMBER PRIMARY KEY,
-	do VARCHAR2(10),
-	si VARCHAR2(12),
-	gu VARCHAR2(12),
-	dong VARCHAR2(12),
-	zip VARCHAR2(7)
 )
