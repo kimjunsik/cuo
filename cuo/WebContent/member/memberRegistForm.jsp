@@ -3,33 +3,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-<style type = "text/css">
-	#registFormArea{
-		margin : auto;
-		width : 500px;
-		height : 500px;
-		border : 1px double orange;
-	}
-	h2,#td_command{
-		text-align : center;
-		border-bottom : 1px dotted red;
-	}
-	table{	
-		width : 480px;
-		margin : auto;
-	}
-	.td_left{
-		width : 200px;
-	}
-	.td_right{
-		width : 280px;
-	}
-	#id{
-		width : 100px;
-	}
-</style>
+    <meta charset="utf-8" />
+    <title>Contact with Map Template | PrepBootstrap</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css" />
+
+    <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+</head>
 <script>
 	function winOpen(){
 		//자바스크립트는 화면을 제어할 수 있는 수많은 내장 객체들을 제공하고 각 내장 객체들은 속성과 메소드가 제공된다.
@@ -37,78 +20,93 @@
 		window.open("idCheck?id=" + document.forms[0].id.value, "window1","width=300,height=300");
 	}
 </script>
-</head>
+<style>
+.col-md-6{
+margin-left:270px;
+}
+</style>
 <body>
-<section id = "registFormArea">
-	<form action="memberRegistPro.mem" method="post">
-	<h2>회원가입</h2>
-	<table>
-		<tr>
-			<td class = "td_left">
-			<label id = "id">회원아이디</label>
-			</td>
-			
-			<td class = "td_right">
-			<input type = "text" name ="id" id = "id" required="required"/>
-			<input type = "button" value = "아이디중복체크" onClick = "winOpen()"/><!-- 마우스로 클릭하면 중복체크.-->
-			</td>
-		</tr>
-		
-		<tr>
-			<td class = "td_left">
-			<label id = "name">회원이름</label>
-			</td>
-			
-			<td class = "td_right">
-			<input type = "text" name ="name" id = "name" required="required"/>
-			</td>
-		</tr>
-		
-		<tr>
-			<td class = "td_left">
-			<label id = "passwd">비밀번호</label>
-			</td>
-			
-			<td class = "td_right">
-			<input type = "password" name ="passwd" id = "passwd" required="required"/>
-			</td>
-		</tr>
-		<tr>
-			<td class = "td_left">
-			<label id = "addr">주소</label>
-			</td>
-			
-			<td class = "td_right">
-			<input type = "text" name ="addr" id = "addr" required="required"/>
-			</td>
-		</tr>
-		<tr>
-			<td class = "td_left">
-			<label id = "birthday">생년월일</label>
-			</td>
-			
-			<td class = "td_right">
-			<input type = "date" name ="birthday" id = "birthday" required="required"/>
-			</td>
-		</tr>
-		<tr>
-			<td class = "td_left">
-			<label id = "grade">등급</label>
-			</td>
-			
-			<td class = "td_right">
-		<select id = "grade" name = "grade">
+
+<div class="container">
+
+<div class="page-header">
+
+</div>
+
+<!-- Contact with Map - START -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="well well-sm">
+                <form class="form-horizontal" action="memberRegistPro.mem" method="post">
+                    <fieldset>
+                        <legend class="text-center header">회원가입</legend>
+                        <div class="form-group">
+                            <div class="col-md-10 col-md-offset-1">
+                                <input id="id" name="id" type="text" placeholder="id" class="form-control">
+								<input type = "button" value = "아이디중복체크" onClick = "winOpen()"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-10 col-md-offset-1">
+                                <input id="name" name="name" type="text" placeholder="name" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-10 col-md-offset-1">
+                                <input id="passwd" name="passwd" type="password" placeholder="password" class="form-control">
+
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-10 col-md-offset-1">
+                                <input id="addr" name="addr" type="text" placeholder="address" class="form-control">
+                            </div>
+                        </div>
+
+ 			<div class="form-group">
+                            <div class="col-md-10 col-md-offset-1">
+                                <input id="birthday" name="birthday" type="date" placeholder="birthday" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-10 col-md-offset-1">
+                                
+			등급 : <select id = "grade" name = "grade">
 			<option>주문자</option>
 			<option>음식점</option>
-		</select>
-			</td>
-		</tr>
-		<tr>
-			<td colspan="2" id = "td_command">
-				<input type = "submit" value = "회원가입" />
-		</tr>
-	</table>
-	</form>
-</section>
+			</select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-12 text-center">
+                                <button type="submit" class="btn btn-primary btn-lg">회원가입</button>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .header {
+        background-color: #F5F5F5;
+        color: #36A0FF;
+        height: 70px;
+        font-size: 27px;
+        padding: 10px;
+    }
+</style>
+
+<!-- Contact with Map - END -->
+
+</div>
+
 </body>
 </html>

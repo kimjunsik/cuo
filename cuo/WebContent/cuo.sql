@@ -51,21 +51,25 @@ CREATE TABLE menu(
    menu9 VARCHAR2(50),
    menu10 VARCHAR2(50),
    menu11 VARCHAR2(50),
-   menu12 VARCHAR2(50)
+   menu12 VARCHAR2(50),
+   id VARCHAR2(20) PRIMARY KEY,
+   FOREIGN KEY (id) REFERENCES member (id) on delete cascade
 )
 
 CREATE TABLE message(
+   id VARCHAR2(20),
     menuKey VARCHAR2(30),
     menuName VARCHAR2(50),
    messageMenu VARCHAR2(50),
    messageQty VARCHAR2(20),
-   messageContent VARCHAR2(2000)
+   messageContent VARCHAR2(2000),
+   messageCurrent VARCHAR2(100) DEFAULT '미응답' 
    --id VARCHAR2(20) PRIMARY KEY,
    --FOREIGN KEY (id) REFERENCES member (id) on delete cascade
 )
-SELECT * FROM message;
+SELECT * FROM menu;
 
-insert into "JAVA"."MENU" ("MENUNUM", "MENUNAME", "MENUADDRESS", "MENUBHOURS", "MENUEHOURS", "MENUDEL", "MENUPACK", "MENUIMAGE", "MENUMAP", "MENUKEY", "MENU1", "MENU2", "MENU3", "MENU4", "MENU5", "MENU6", "MENU7", "MENU8", "MENU9", "MENU10", "MENU11", "MENU12") values(1, 'oo반점', '집', '0900', '1000', 'o', 'o', '1', '1', '중식', '자장면', '탕수육', '치킨', '', null, null, null, null, null, null, null, null)
+insert into "JAVA"."MENU" ("MENUNUM", "MENUNAME", "MENUADDRESS", "MENUBHOURS", "MENUEHOURS", "MENUDEL", "MENUPACK", "MENUIMAGE", "MENUMAP", "MENUKEY", "MENU1", "MENU2", "MENU3", "MENU4", "MENU5", "MENU6", "MENU7", "MENU8", "MENU9", "MENU10", "MENU11", "MENU12", "ID") values(1, 'oo반점', '집', '0900', '1000', 'o', 'o', '1', '1', '중식', '자장면', '탕수육', '치킨', '', null, null, null, null, null, null, null, null, bbb)
 insert into "JAVA"."MENU" ("MENUNUM", "MENUNAME", "MENUADDRESS", "MENUBHOURS", "MENUEHOURS", "MENUDEL", "MENUPACK", "MENUIMAGE", "MENUMAP", "MENUKEY", "MENU1", "MENU2", "MENU3", "MENU4", "MENU5", "MENU6", "MENU7", "MENU8", "MENU9", "MENU10", "MENU11", "MENU12") values(2, 'xx치킨', '집', '0900', '1000', 'o', 'o', '1', '1', '치킨', '자장면', '탕수육', '치킨', '', null, null, null, null, null, null, null, null)
 
 drop TABLE message;

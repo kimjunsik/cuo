@@ -29,7 +29,7 @@ public class MemberRegistProAction implements Action {
 		if(registSuccess){
 			forward = new ActionForward();
 			forward.setRedirect(true);
-			forward.setUrl("index.jsp");
+			forward.setUrl("maindex.jsp");
 		}
 		else{
 			System.out.println("½ÇÆÐ");

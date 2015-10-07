@@ -25,7 +25,7 @@ public class myPageAction implements Action {
 			response.setContentType("text/html;charset=UTF-8");
 			PrintWriter out = response.getWriter();
 			out.println("<script>");
-			out.println("alert('로그인 필요')");
+			out.println("alert('비로그인시 마이페이지를 이용할 수 없습니다.')");
 			out.println("history.back()");
 			out.println("</script>");
 		}

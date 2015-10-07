@@ -11,6 +11,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import cuo.action.Action;
 import cuo.vo.ActionForward;
+import cuo.web.myPage.action.MyOrderListAction;
+import cuo.web.myPage.action.OrderAcceptAction;
 import cuo.web.myPage.action.memberInfoAction;
 import cuo.web.myPage.action.memberInfoPasswdProAction;
 import cuo.web.myPage.action.memberRemoveAction;
@@ -90,6 +92,25 @@ public class MyPageController extends HttpServlet {
 				e.printStackTrace();
 			}
 		}
+		else if(command.equals("/myOrderList.mp")){
+	         action = new MyOrderListAction();
+	         try {
+	            forward = action.execute(request, response);
+	         } catch (Exception e) {
+	            // TODO: handle exception
+	            e.printStackTrace();
+	         }
+	      }
+	      else if(command.equals("/accept.mp")){
+	         action = new OrderAcceptAction();
+	         try {
+	            forward = action.execute(request, response);
+	         } catch (Exception e) {
+	            // TODO: handle exception
+	            e.printStackTrace();
+	         }
+	      }
+		
 			
 		//Æ÷¿öµù
 		if(forward != null){

@@ -32,7 +32,7 @@ public class memberUpdateAction implements Action {
 		if(modifySuccess){
 			forward = new ActionForward();
 			forward.setRedirect(true);
-			forward.setUrl("index.jsp");
+			forward.setUrl("maindex.jsp");
 		}
 		else{
 			response.setContentType("text/html;charset=UTF-8");

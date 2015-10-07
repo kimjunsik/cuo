@@ -28,7 +28,7 @@ public class LoginProAction implements Action {
 		if(loginMember !=null){
 			HttpSession session = request.getSession();//¼¼¼Ç ¾ò¾î¿È*/			
 			session.setAttribute("loginMember", loginMember);
-			forward.setUrl("main.jsp");
+			forward.setUrl("maindex.jsp");
 		}
 		else{
 			response.setContentType("text/html;charset=UTF-8");
