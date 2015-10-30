@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace = "memberAdmin">
+<select id="selectMember" resultType="cuo.web.memberAdmin.vo.MemberAdmin">
+	SELECT * FROM member
+</select>
+<select id="selectMemberinfo" resultType="cuo.web.login.vo.Member">
+	SELECT * FROM member WHERE id = #{id} AND passwd = #{passwd}
+</select>
+<select id="selectIdCheck" resultType="cuo.web.login.vo.Member">
+	SELECT COUNT(*) FROM member WHERE id = #{id}
+</select>
+<update id="updateMemberGrade" parameterType="cuo.web.memberAdmin.vo.MemberAdmin">
+	<![CDATA[
+		UPDATE member SET grade = #{grade} WHERE id = #{id}
+		]]>
+</update>
+<insert id="insertMember" parameterType="cuo.web.login.vo.Member">
+	<![CDATA[
+		INSERT INTO member VALUES (#{id},#{name},#{passwd},#{addr},#{birthday},#{grade})
+		]]>
+</insert>
+
+</mapper>
