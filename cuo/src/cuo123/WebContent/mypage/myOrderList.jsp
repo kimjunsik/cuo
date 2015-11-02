@@ -36,13 +36,17 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-<title>Insert title here</title>
+<title>마이페이지</title>
 <style type="">
 dropdown {
 	margin: auto;
 }
 .log_in{
 		float:right;
+		}
+		#margin{
+		width: 10%;
+		height: 10%;
 		}
 </style>
 </head>
@@ -258,9 +262,9 @@ dropdown {
 
 
 	<div class="container theme-showcase" role="main">
-
+	<div>&nbsp</div>
+						<br><br>
 		<!-- Main jumbotron for a primary marketing message or call to action -->
-		<div class="jumbotron"></div>
 
 		<!-- <table class="table table-striped table-hover ">  테이블
   <thead>
@@ -274,24 +278,27 @@ dropdown {
 <form action="accept.mp">
 
 		<%
-  if(grade.equals("주문자")){
-  for(int i = 0;i < myOrderList.size();i++ ){
-  %>
-		<ul class="nav nav-pills">
-			<li class="dropdown"><a class="dropdown-toggle"
-				data-toggle="dropdown" href="#" aria-expanded="false"> <%=myOrderList.get(i).getMenuName()%>
-					<span class="caret"></span>
-			</a>
-				<ul class="dropdown-menu" style="width: 250px;">
-
-					<li><label>주문메뉴 : <%=myOrderList.get(i).getMessageMenu()%></label></li>
-					<li><label>주문개수 : <%=myOrderList.get(i).getMessageQty()%></label></li>
-					<li><label>요청사항 : <%=myOrderList.get(i).getMessageContent()%></label></li>
-					<li><label>주문처리현황 : <%=myOrderList.get(i).getMessageCurrent()%></label></li>
-					<li class="divider"></li>
-					<%--  <li><a href="orderForm.or?menuName=<%=myOrderList.get(i).getMenuName()%>">주문</a></li> --%>
-				</ul></li>
-		</ul>
+		if(grade.equals("주문자")){
+			if(myOrderList != null){
+			  for(int i = 0;i < myOrderList.size();i++ ){
+			  %>
+			  <div class="col-lg-3">
+			 <div class="well bs-component">
+			  <form class="form-horizontal">
+			  <fieldset>
+			    <legend><%=myOrderList.get(i).getMenuName()%></legend>
+			    <div class="form-group">
+			      <div class="col-lg-15">
+			      <label>주문메뉴 : <%=myOrderList.get(i).getMessageMenu()%></label><br>
+								<label>주문개수 : <%=myOrderList.get(i).getMessageQty()%></label><br>
+								<label>요청사항 : <%=myOrderList.get(i).getMessageContent()%></label><br>
+								<label>주문처리현황 : <%=myOrderList.get(i).getMessageCurrent()%></label>
+			    </div>
+			    </div>
+			  </fieldset>
+			</form>
+			</div>
+			</div>
 		<%-- <tr> 테이블
       <td><%=i %></td>
       <td><%=menuList.get(i).getMenuName()%></td>
@@ -300,10 +307,14 @@ dropdown {
 
 		<%
   }
-  }
+  }}
+		else{
   %>
+<br><h3>주문 내역이 없습니다.</h3>
+  <%} %>
 		<%
   if(grade.equals("음식점")){
+	  if(myOrderList != null){
 	  %>
 	  <input type ="submit" value="주문전체수락">
 	  <%
@@ -337,8 +348,11 @@ dropdown {
 
 		<%
   }
-  }
-  %>
+  }}
+	else{
+%>
+<br><h3>주문 내역이 없습니다.</h3>
+<%} %>
 		</form>
 
 		<!--  테이블

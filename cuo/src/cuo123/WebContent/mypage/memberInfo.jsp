@@ -34,50 +34,22 @@
 	.log_in{
 		float:right;
 	}
-	#writeFormArea{
-		margin : auto;
-		width : 500px;
-		height : 200px;
-		border : 1px double skyblue;
-		
-	}
 	h2,#td_command{
 		text-align : center;
 		border-bottom : 1px dotted white;
 		
 	}
-	table{	
-		width : 350px;
-		margin : auto;
-		
-	}
 	#registFormArea{
 		margin : auto;
-		width : 500px;
+		width : 100%;
 		height : 500px;
-		border : 1px double gray;
-	}
-	.td_left{
-		width : 200px;
-	}
-	.td_right{
-		width : 280px;
-	}
-  	#id{
-		width : 100px;
 	}
 
-
-	#logo{
-		width:250px;
-		height:100px;
-		margin:auto;
-		
-	}
 	#margin{
-		position: absolute;
-		bottom: 300px;
-		left : 350px;
+		margin-top:3%;
+		margin-left: 10%;
+		width : 80%;
+		height : 200%;
 	}
 </style>
 </head>
@@ -293,7 +265,7 @@
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
-                   <a href="#">
+                   <a href="mypage.mp">
                        MyPage
                     </a>
                 </li>
@@ -301,86 +273,84 @@
                     <a href="memberInfo.mp">회원정보</a>
                 </li>
                 <li>
-                    <a href="#">주문내역</a>
-                </li>
-                <li>
-                    <a href="#">메시지함</a>
+                    <a href="myOrderList.mp">주문내역</a>
                 </li>
             </ul>
         </div>
         <!-- /#sidebar-wrapper -->
 
         <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-9">
+                    <div>&nbsp</div>
 <section id = "margin">
 <section id = "registFormArea">
 	<form action="memberUpdate.mp" method="post">
-	<h2>내 회원정보</h2>
-	<table>
-		<tr>
-			<td class = "td_left">
-			<label id = "name">회원이름</label>
-			</td>
-			
-			<td class = "td_right">
-			<input type = "hidden" name = "id" value = "<%=loginMember.getId() %>"/>
-			<input type = "text" name ="name" id = "name" required="required"
-			value = "<%=loginMember.getName()%>"/>
-			</td>
-		</tr>
-		
-		<tr>
-			<td class = "td_left">
-			<label id = "passwd">비밀번호</label>
-			</td>
-			
-			<td class = "td_right">
-			<input type = "password" name ="passwd" id = "passwd" required="required"
-			value = "<%=loginMember.getPasswd()%>"/>
-			</td>
-		</tr>
-		<tr>
-			<td class = "td_left">
-			<label id = "addr">주소</label>
-			</td>
-			
-			<td class = "td_right">
-			<input type = "text" name ="addr" id = "addr" required="required"
-			value = "<%=loginMember.getAddr()%>"/>
-			</td>
-		</tr>
-		<tr>
-			<td class = "td_left">
-			<label id = "birthday">생년월일</label>
-			</td>
-			
-			<td class = "td_right">
-			<input type = "date" name ="birthday" id = "birthday" required="required"
-			value = "<%=loginMember.getBirthday().substring(0,10)%>"/>
-			</td>
-		</tr>
-		<tr>
-			<td class = "td_left">
-			<label id = "grade">등급</label>
-			</td>
-			
-			<td class = "td_right">
-		<select id = "grade" name = "grade">
+	<form class="form-horizontal">
+  <fieldset>
+  <legend>내 회원정보</legend>
+   <div class="form-group">
+      <label for="name" class="col-lg-2 control-label">회원이름</label>
+      <div class="col-lg-10">
+        <input type = "hidden" name = "id" value = "<%=loginMember.getId() %>"/>
+		<input type = "text" class="form-control" name ="name" id = "name" required="required" value = "<%=loginMember.getName()%>"/>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="password" class="col-lg-2 control-label">비밀번호</label>
+      <div class="col-lg-10">
+        <input type = "password" class="form-control" name ="passwd" id = "passwd" required="required" value = "<%=loginMember.getPasswd()%>"/>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="address" class="col-lg-2 control-label">메일</label>
+      <div class="col-lg-10">
+        <input type = "text" class="form-control" name ="addr" id = "addr" required="required" value = "<%=loginMember.getAddr()%>"/>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="date" class="col-lg-2 control-label">생년월일</label>
+      <div class="col-lg-10">
+        <input type = "date" class="form-control" name ="birthday" id = "birthday" required="required" value = "<%=loginMember.getBirthday().substring(0,10)%>"/>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="grade" class="col-lg-2 control-label">등급</label>
+      <div class="col-lg-10">
+        <select id = "grade" name = "grade">
 			<option <%if(loginMember.getGrade().equals("주문자")){ %>selected<%} %>>주문자</option>
 			<option <%if(loginMember.getGrade().equals("음식점")){ %>selected<%} %>>음식점</option>
 		</select>
-			</td>
-		</tr>
-		<tr>
-			<td colspan="2" id = "td_command">
-				<input type = "submit" value = "수정완료"/>
-				<a href= "memberRemove.mp"><input type = "button" value = "회원탈퇴"/></a>
-		</tr>
-	</table>
+      </div>
+    </div>
+   
+    <div class="form-group">
+      <div class="col-lg-10 col-lg-offset-2">
+      <tr>
+					<td colspan="2" id = "td_command">
+						<input type = "submit" value = "수정완료" class="btn btn-default"/>
+						<a href= "memberRemove.mp"><input type = "button" value = "회원탈퇴" class="btn btn-disabled"/></a>
+					</td>
+				</tr>
+      </div>
+    </div>
+    
+    
+    
+    
+	</fieldset>
+	</form>
 	</form>
 </section>
 </section>
+
         <!-- /#page-content-wrapper -->
 
+    </div>
+    </div>
+    </div>
     </div>
     <!-- /#wrapper -->
 

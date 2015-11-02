@@ -37,33 +37,14 @@
 		float:right;
 	}
 	#writeFormArea{
-		margin : auto;
-		width : 600px;
-		height : 300px;
+		margin-top:3%;
+		margin-left: 10%;
+		width : 90%;
+		height : 200%;
 		border : 1px double lightgray;
 	}
 	h3,#td_command{
 		text-align : center;
-	}
-	table{	
-		width : 600px;
-		margin : auto;
-	}
-	.td_left{
-		width : 200px;
-	}
-	.td_right{
-		width : 280px;
-	}
-	#logo{
-		width:250px;
-		height:100px;
-		margin:auto;
-	}
-	#margin{
-		position: absolute;
-		bottom: 500px;
-		right: 350px;
 	}
 
 </style>
@@ -274,39 +255,13 @@
 	}
 %>
 
-    <div id="wrapper">
-
-        <!-- Sidebar -->
-        <div id="sidebar-wrapper">
-            <ul class="sidebar-nav">
-                <li class="sidebar-brand">
-                    <a href="#">
-                       MenuList
-                    </a>
-                </li>
-                <li>
-                    <a href="#">중식</a>
-                </li>
-                <li>
-                    <a href="#">일식</a>
-                </li>
-                <li>
-                    <a href="#">양식</a>
-                </li>
-                <li>
-                    <a href="#">한식</a>
-                </li>
-                <li>
-                    <a href="#">분식</a>
-                </li>
-                <li>
-                    <a href="#">기타</a>
-                </li>
-            </ul>
-        </div>
-        <!-- /#sidebar-wrapper -->
 
         <!-- Page Content -->
+         <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-9">
+                    <div>&nbsp</div>
         <section id = "margin">
 <section id = "writeFormArea">
 		<h3>게시판 글수정</h3>
@@ -330,7 +285,7 @@
     <div class="form-group">
       <label for="textArea" class="col-lg-2 control-label">내용</label>
       <div class="col-lg-10">
-        <textarea class="form-control" rows="3" name="postContent" id="postContent"></textarea>
+        <textarea class="form-control" rows="17" name="postContent" id="postContent"></textarea>
       </div>
     </div>
    
@@ -403,6 +358,10 @@
 			</table> --%>
 	</section>
 </section>
+
+        </div>
+                </div>
+        </div>
         <!-- /#page-content-wrapper -->
 
     </div>

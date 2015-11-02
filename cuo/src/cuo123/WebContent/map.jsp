@@ -37,52 +37,12 @@
 		float:right;
 	}
 
-	#pageArea{
-		margin : auto;
-		width : 500px;
-		height:40px;
-		text-align:center;
-		 clear: both;
-		 margin-top: 40px;
-		 
-	}
-	h3,#td_command{
-		text-align : center;
-		border-bottom : 1px dotted white;
-		
-	}
-	table{	
-		width : 800px;
-		margin : auto;
-		
-	}
-	#meun{
-		border-bottom: 1px solid #8ed4e3;
-		border-width:2px;
-		border-style:solid; 
-		border-color:#07BFF7;   
-		text-align:center;
-		
-	}
-
-	h2{
-    	margin-left : 120px;
-    	margin-bottom : 10px;
-       	color : #0070c0;
-       	
-  	}
-
-
-	#logo{
-		width:250px;
-		height:100px;
-		margin:auto;
-		
 	}
 	#margin{
-	position: absolute;
-	left : 300px;
-	bottom: 300px;
+	margin-left: 10%;
+		width : 100%;
+		height : 100%;
+		border : 1px double white;
 	}
 </style>
 </head>
@@ -292,36 +252,7 @@
 	}
 %>
 
-    <div id="wrapper">
 
-        <!-- Sidebar -->
-        <div id="sidebar-wrapper">
-            <ul class="sidebar-nav">
-                <li class="sidebar-brand">
-                    <a href="#">
-                       MenuList
-                    </a>
-                </li>
-                <li>
-                    <a href="#">중식</a>
-                </li>
-                <li>
-                    <a href="#">일식</a>
-                </li>
-                <li>
-                    <a href="#">양식</a>
-                </li>
-                <li>
-                    <a href="#">한식</a>
-                </li>
-                <li>
-                    <a href="#">분식</a>
-                </li>
-                <li>
-                    <a href="#">기타</a>
-                </li>
-            </ul>
-        </div>
         <!-- /#sidebar-wrapper -->
 
         <!-- Page Content -->
@@ -331,7 +262,7 @@
    src="http://openapi.map.naver.com/openapi/naverMap.naver?ver=2.0&key=AIzaSyCUjjqNA0i5i2r_Us1U2_xgzu9GGZ0xcL8"></script>
       
    <div id="testMap"
-      style="border: 1px solid #000; width: 1000px; height: 840px; margin: 20px;"></div>
+      style="border: 1px solid #000; width: 50%; height: 50%; margin: 10%;"></div>
 
    <script type="text/javascript">
       var oPoint = new nhn.api.map.LatLng(35.9111792, 128.80772100000002);
@@ -414,7 +345,6 @@
    </section>
         <!-- /#page-content-wrapper -->
 
-    </div>
     <!-- /#wrapper -->
 
     <!-- jQuery -->

@@ -36,38 +36,14 @@
 		float:right;
 	}
 	#writeFormArea{
-		margin : auto;
-		width : 500px;
-		height : 500px;
+		margin-top:3%;
+		margin-left: 10%;
+		width : 90%;
+		height : 200%;
 		border : 1px double lightgray;
-		
 	}
 	h3,#td_command{
 		text-align : center;
-		border-bottom : 1px dotted white;
-	}
-	table{	
-		width : 300px;
-		margin : auto;
-	}
-	.td_left{
-		width : 200px;
-	}
-	.td_right{
-		width : 280px;
-	}
-
-
-	#logo{
-		width:250px;
-		height:100px;
-		margin:auto;
-		
-	}
-	#margin{
-		position: absolute;
-		left : 350px;
-		bottom: 250px;
 	}
 </style>
 </head>
@@ -318,7 +294,11 @@
         <!-- /#sidebar-wrapper -->
 
         <!-- Page Content -->
-
+<div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-9">
+                    <div>&nbsp</div>
 <section id = "margin">
 <section id = "writeFormArea">
 		<h3>게시판 글쓰기</h3>
@@ -342,7 +322,7 @@
     <div class="form-group">
       <label for="textArea" class="col-lg-2 control-label">내용</label>
       <div class="col-lg-10">
-        <textarea class="form-control" rows="3" name="postContent" id="postContent"></textarea>
+        <textarea class="form-control" rows="17" name="postContent" id="postContent"></textarea>
       </div>
     </div>
    <input type = "hidden" name = "postNum" value = "<%=postNum %>">
@@ -370,6 +350,11 @@
 		</form>
 	</section>
 </section>
+
+ </div>
+                </div>
+            </div>
+        </div>
         <!-- /#page-content-wrapper -->
 
     </div>

@@ -37,119 +37,47 @@
 			float:right;
 		}
 #listArea{
-		margin : auto; 
-		width : 900px;
-		height : 600px;
+margin-top:3%;
+margin-left:10%;
+		width : 90%;
+		height : 100%;
 		border : 1px double white;
-		float: left;
 	}
 	#pageArea{
-		margin : auto;
-		width : 500px;
+		width : 90%;
 		height:40px;
 		text-align:center;
 		 clear: both;
 		 margin-top: 40px;
 		 
 	}
-	h3,#td_command{
+	h3{
 		text-align : center;
 		border-bottom : 1px dotted white;
-		
-	}
-	table{	
-		width : 800px;
-		margin : auto;
 		
 	}
 	#tr_title{
 		background : lightgray;
 	}
 	.td_postNum{
-		width : 40px;
+		width : 10%;
 	}
 	.td_postTitle{
-		width : 180px;
+		width : 30%;
 	}
 	.td_postWriter,.td_postRegistTime{
-		width : 100px;
+		width : 10%;
 	}
 	.td_postReadcount{
-		width: 50px;
+		width: 10%;
 	}
 	#search{
 		height : 20px;
-		width:600px;
+		width:90%;
 		margin-top:40px;
 		text-align:center;
 		margin:auto;
 	}
-	
-	#meun{
-		border-bottom: 1px solid #8ed4e3;
-		border-width:2px;
-		border-style:solid; 
-		border-color:#07BFF7;   
-		text-align:center;
-		
-	}
-	#dd{
-    	border-bottom: 1px solid #07BFF7;
-		font-family:"a구름자전거";
-		font-size:25px;
-				background-color: #FAF4C0;
-		
-    }
-	h2{
-    	margin-left : 120px;
-    	margin-bottom : 10px;
-       	color : #0070c0;
-       	
-  	}
-	.tr_one{
-		margin:15px;
-	}
-	.tr_two{
-		margin:15px;
-	}
-	.tr_three{
-		margin:15px;
-	}
-	#aa{
-		width : 150px;
-		height : 500px;
-		border-right : 1px solid #07BFF7;
-		float: left;
-				background-color: #FAF4C0;
-		
-	}
-	#logo{
-		width:250px;
-		height:100px;
-		margin:auto;
-		
-	}
-	nav ul{
-		margin:auto;
-		text-align:center;
-		font-size:30px;
-		font-family:"a구름자전거";
-		}
-	nav li {
-		width:95px; 
-		display:inline-block;
-		margin:auto;
-		text-align:center;
-		font-size:18px;
-		}
-	#top {
-		margin:auto;
-		text-align:center;
-		background-image:url(imgs/me.png);
-		height:46px;
-		width:891px;
-		
-		}
 		</style>
 </head>
 
@@ -358,37 +286,7 @@
 	}
 %>
 
-    <div id="wrapper">
 
-        <!-- Sidebar -->
-        <div id="sidebar-wrapper">
-            <ul class="sidebar-nav">
-                <li class="sidebar-brand">
-                    <a href="#">
-                       MenuList
-                    </a>
-                </li>
-                <li>
-                    <a href="#">중식</a>
-                </li>
-                <li>
-                    <a href="#">일식</a>
-                </li>
-                <li>
-                    <a href="#">양식</a>
-                </li>
-                <li>
-                    <a href="#">한식</a>
-                </li>
-                <li>
-                    <a href="#">분식</a>
-                </li>
-                <li>
-                    <a href="#">기타</a>
-                </li>
-            </ul>
-        </div>
-        <!-- /#sidebar-wrapper -->
 
         <!-- Page Content -->
 
@@ -396,12 +294,12 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-9">
+                    <div>&nbsp</div>
     <%!
 		
 		//한페이지당 출력될 글의 개수 지정
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 	%>
-	<br/><br/><br/><br/><br/>
 	
 	<section id = "listArea">
 		<c:if test="${empty articleList }">
@@ -491,9 +389,7 @@
 	</section>
 	
                     </div>
-                </div>
-            </div>
-        </div>
+        </div></div>
         <!-- /#page-content-wrapper -->
     </div>
     <!-- /#wrapper -->

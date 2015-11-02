@@ -68,10 +68,18 @@ CREATE TABLE message(
    --FOREIGN KEY (id) REFERENCES member (id) on delete cascade
 )
 SELECT * FROM menu;
+SELECT * FROM message;
 
 insert into "JAVA"."MENU" ("MENUNUM", "MENUNAME", "MENUADDRESS", "MENUBHOURS", "MENUEHOURS", "MENUDEL", "MENUPACK", "MENUIMAGE", "MENUMAP", "MENUKEY", "MENU1", "MENU2", "MENU3", "MENU4", "MENU5", "MENU6", "MENU7", "MENU8", "MENU9", "MENU10", "MENU11", "MENU12", "ID") values(1, 'oo반점', '집', '0900', '1000', 'o', 'o', '1', '1', '중식', '자장면', '탕수육', '치킨', '', null, null, null, null, null, null, null, null, bbb)
 insert into "JAVA"."MENU" ("MENUNUM", "MENUNAME", "MENUADDRESS", "MENUBHOURS", "MENUEHOURS", "MENUDEL", "MENUPACK", "MENUIMAGE", "MENUMAP", "MENUKEY", "MENU1", "MENU2", "MENU3", "MENU4", "MENU5", "MENU6", "MENU7", "MENU8", "MENU9", "MENU10", "MENU11", "MENU12") values(2, 'xx치킨', '집', '0900', '1000', 'o', 'o', '1', '1', '치킨', '자장면', '탕수육', '치킨', '', null, null, null, null, null, null, null, null)
-
+insert into "JAVA"."MENU" ("MENUNUM", "MENUNAME", "MENUADDRESS", "MENUBHOURS", "MENUEHOURS", "MENUDEL", "MENUPACK", "MENUIMAGE", "MENUMAP", "MENUKEY", "MENU1", "MENU2", "MENU3", "MENU4", "MENU5", "MENU6", "MENU7", "MENU8", "MENU9", "MENU10", "MENU11", "MENU12", "ID") values(3, 'oo족발', 'a', 'a', 'a', 'o', 'o', '1', '1', '족발', '양념', '후라이드', null, null, null, null, null, null, null, null, null, null, 'ccc')
+insert into "JAVA"."MENU" ("MENUNUM", "MENUNAME", "MENUADDRESS", "MENUBHOURS", "MENUEHOURS", "MENUDEL", "MENUPACK", "MENUIMAGE", "MENUMAP", "MENUKEY", "MENU1", "MENU2", "MENU3", "MENU4", "MENU5", "MENU6", "MENU7", "MENU8", "MENU9", "MENU10", "MENU11", "MENU12", "ID") values(4, 'oo보쌈', 'a', 'a', 'a', 'o', 'o', '1', '1', '보쌈', '양념', '후라이드', null, null, null, null, null, null, null, null, null, null, 'ddd')
+insert into "JAVA"."MENU" ("MENUNUM", "MENUNAME", "MENUADDRESS", "MENUBHOURS", "MENUEHOURS", "MENUDEL", "MENUPACK", "MENUIMAGE", "MENUMAP", "MENUKEY", "MENU1", "MENU2", "MENU3", "MENU4", "MENU5", "MENU6", "MENU7", "MENU8", "MENU9", "MENU10", "MENU11", "MENU12", "ID") values(5, 'oo분식', 'a', 'a', 'a', 'o', 'o', '1', '1', '분식', '양념', '후라이드', null, null, null, null, null, null, null, null, null, null, 'eee')
+insert into "JAVA"."MENU" ("MENUNUM", "MENUNAME", "MENUADDRESS", "MENUBHOURS", "MENUEHOURS", "MENUDEL", "MENUPACK", "MENUIMAGE", "MENUMAP", "MENUKEY", "MENU1", "MENU2", "MENU3", "MENU4", "MENU5", "MENU6", "MENU7", "MENU8", "MENU9", "MENU10", "MENU11", "MENU12", "ID") values(6, 'oo일식', 'a', 'a', 'a', 'o', 'o', '1', '1', '일식', '양념', '후라이드', null, null, null, null, null, null, null, null, null, null, 'xxx')
+insert into "JAVA"."MENU" ("MENUNUM", "MENUNAME", "MENUADDRESS", "MENUBHOURS", "MENUEHOURS", "MENUDEL", "MENUPACK", "MENUIMAGE", "MENUMAP", "MENUKEY", "MENU1", "MENU2", "MENU3", "MENU4", "MENU5", "MENU6", "MENU7", "MENU8", "MENU9", "MENU10", "MENU11", "MENU12", "ID") values(7, 'oo족발', 'a', 'a', 'a', 'o', 'o', '1', '1', '족발', '양념', '후라이드', null, null, null, null, null, null, null, null, null, null, 'nnn')
+insert into "JAVA"."MENU" ("MENUNUM", "MENUNAME", "MENUADDRESS", "MENUBHOURS", "MENUEHOURS", "MENUDEL", "MENUPACK", "MENUIMAGE", "MENUMAP", "MENUKEY", "MENU1", "MENU2", "MENU3", "MENU4", "MENU5", "MENU6", "MENU7", "MENU8", "MENU9", "MENU10", "MENU11", "MENU12", "ID") values(8, 'oo족발', 'a', 'a', 'a', 'o', 'o', '1', '1', '족발', '양념', '후라이드', null, null, null, null, null, null, null, null, null, null, 'mmm')
+insert into "JAVA"."MENU" ("MENUNUM", "MENUNAME", "MENUADDRESS", "MENUBHOURS", "MENUEHOURS", "MENUDEL", "MENUPACK", "MENUIMAGE", "MENUMAP", "MENUKEY", "MENU1", "MENU2", "MENU3", "MENU4", "MENU5", "MENU6", "MENU7", "MENU8", "MENU9", "MENU10", "MENU11", "MENU12", "ID") values(9, 'oo족발', 'a', 'a', 'a', 'o', 'o', '1', '1', '족발', '양념', '후라이드', null, null, null, null, null, null, null, null, null, null, 'kkk')
+insert into "JAVA"."MENU" ("MENUNUM", "MENUNAME", "MENUADDRESS", "MENUBHOURS", "MENUEHOURS", "MENUDEL", "MENUPACK", "MENUIMAGE", "MENUMAP", "MENUKEY", "MENU1", "MENU2", "MENU3", "MENU4", "MENU5", "MENU6", "MENU7", "MENU8", "MENU9", "MENU10", "MENU11", "MENU12", "ID") values(10, 'oo족발', 'a', 'a', 'a', 'o', 'o', '1', '1', '족발', '양념', '후라이드', null, null, null, null, null, null, null, null, null, null, 'lll')
 drop TABLE message;
 drop TABLE menu;
 drop TABLE comments;
@@ -86,3 +94,5 @@ CREATE TABLE member(
 	birthday DATE,
 	grade VARCHAR2(12)
 )
+
+SELECT * FROM member;

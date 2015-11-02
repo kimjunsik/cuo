@@ -34,43 +34,14 @@
 	.log_in{
 		float:right;
 	}
-	#writeFormArea{
-		margin : auto;
-		width : 800px;
-		height : 500px;
-		border : 1px double skyblue;
-		
-	}
-	h3,#td_command{
-		text-align : center;
-		border-bottom : 1px dotted white;
-		
-	}
-	table{	
-		width : 600px;
-		margin : auto;
-		
-	}
-	}
-	.td_left{
-		width : 200px;
-	}
-	.td_right{
-		width : 280px;
-	}
   	#margin{
-  		position: absolute;
-  		left : 300px;
-  		bottom: 500px; 
+  		margin-left: 8%;
+		width : 70%;
+		height : 100%;
+		border : 1px double white;
   	}
 
 
-	#logo{
-		width:250px;
-		height:100px;
-		margin:auto;
-		
-	}
 
 </style>
 </head>
@@ -286,27 +257,15 @@
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
-                    <a href="#">
-                       MenuList
+                    <a href="orderAdminList.ora">
+                       주문관리
                     </a>
                 </li>
                 <li>
-                    <a href="#">중식</a>
+                    <a href="orderAdminMenuRegist.ora">등록</a>
                 </li>
                 <li>
-                    <a href="#">일식</a>
-                </li>
-                <li>
-                    <a href="#">양식</a>
-                </li>
-                <li>
-                    <a href="#">한식</a>
-                </li>
-                <li>
-                    <a href="#">분식</a>
-                </li>
-                <li>
-                    <a href="#">기타</a>
+                    <a href="orderAdminMenuModify.ora">삭제</a>
                 </li>
             </ul>
         </div>
@@ -314,6 +273,7 @@
 
         <!-- Page Content -->
 	<section id = "margin">
+	<div>&nbsp</div><br><br>
 		<h2>메뉴 삭제</h2>
 	<div class="section">
 		<form action="orderAdminMenuRemove.ora" method="post">

@@ -245,13 +245,13 @@
 
         <!-- Heading Row -->
         <div class="row">
-            <div class="col-md-8">
+            <div class="col-md-7">
                 <img class="img-responsive img-rounded" src="imgs/form.jpg" alt="">
             </div>
             <!-- /.col-md-8 -->
             
             <div class="col-md-4">
-              <img src="imgs/form2.jpg" width = "420" height = "320" alt="">
+              <img class="img-responsive img-rounded" src="imgs/form2.jpg" alt="">
             </div>
             
             <!-- /.col-md-4 -->

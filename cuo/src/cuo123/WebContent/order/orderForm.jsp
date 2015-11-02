@@ -36,36 +36,17 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-<title>Insert title here</title>
+<title>주문하기</title>
  <style>
 	.log_in{
 		float:right;
 	}
-	#writeFormArea{
-		margin : auto;
-		width : 800px;
-		height : 500px;
-		border : 1px double skyblue;
-	}
-	h3,#td_command{
-		text-align : center;
-		border-bottom : 1px dotted white;
-		
-	}
-	table{	
-		width : 600px;
-		margin : auto;
-	}
-	.td_left{
-		width : 200px;
-	}
-	.td_right{
-		width : 280px;
-	}
-	#logo{
-		width:250px;
-		height:100px;
-		margin:auto;
+	#orderFormArea{
+		margin-top:3%;
+		margin-left: 5%;
+		width : 70%;
+		height : 100%;
+		border : 1px double white;
 	}
 </style>
 </head>
@@ -312,10 +293,9 @@
         <!-- Page Content -->	
 	<div class="container theme-showcase" role="main">
 
-		<!-- Main jumbotron for a primary marketing message or call to action -->
-		<div class="jumbotron"></div>
-		<div class="row">
-			<div class="col-lg-6">
+		<div>&nbsp</div><br>
+		<div class="row" >
+			<div class="col-lg-6" id = "orderFormArea" >
 				<div class="well bs-component">
 					<form action="orderReg.or"  class="form-horizontal">
 						<fieldset>
@@ -429,13 +409,6 @@
 										<option>9개</option>
 										<option>10개</option>
 									</select>
-									 <input type="button" id="button1" onclick="button1_click();"
-										value="+" />
-									<script type="text/javascript">
-										function button1_click() {
-											
-										}
-									</script>
 								</div>
 
 							</div>

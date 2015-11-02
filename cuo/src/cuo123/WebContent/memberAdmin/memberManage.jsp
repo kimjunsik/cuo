@@ -36,11 +36,11 @@
 	.log_in{
 		float:right;
 	}
-	#writeFormArea{
-		margin : auto;
-		width : 800px;
-		height : 500px;
-		border : 1px double skyblue;
+	#margin{
+		margin-top:3%;
+		margin-left: 10%;
+		width : 90%;
+		height : 200%;
 		
 	}
 	h3,#td_command{
@@ -48,32 +48,8 @@
 		border-bottom : 1px dotted white;
 		
 	}
-	table{	
-		width : 600px;
-		margin : auto;
-		
-	}
-	}
-	.td_left{
-		width : 200px;
-	}
-	.td_right{
-		width : 280px;
-	}
   	}
 
-
-	#logo{
-		width:250px;
-		height:100px;
-		margin:auto;
-		
-	}
-	#margin{
-		position: absolute;
-		left : 300px;
-		bottom: 300px;
-	}
 </style>
 </head>
 
@@ -287,37 +263,27 @@
         <!-- Sidebar -->
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
-                <li class="sidebar-brand">
-                    <a href="#">
-                       MenuList
+             <li class="sidebar-brand">
+                    <a href="memberList.cuo">
+                       회원관리
                     </a>
                 </li>
                 <li>
-                    <a href="#">중식</a>
-                </li>
-                <li>
-                    <a href="#">일식</a>
-                </li>
-                <li>
-                    <a href="#">양식</a>
-                </li>
-                <li>
-                    <a href="#">한식</a>
-                </li>
-                <li>
-                    <a href="#">분식</a>
-                </li>
-                <li>
-                    <a href="#">기타</a>
+                    <a href="memberGradeModify.cuo">등급수정</a>
                 </li>
             </ul>
         </div>
         <!-- /#sidebar-wrapper -->
 
         <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-9">
 <%
 	ArrayList<MemberAdmin> memberList = (ArrayList<MemberAdmin>)request.getAttribute("memberList");
 %>
+<div>&nbsp</div>
 <section id = "margin">
 <div class="section">
       <div class="container">
@@ -353,6 +319,10 @@
       </div>
     </div>
     </section>
+     </div>
+                </div>
+            </div>
+        </div>
         <!-- /#page-content-wrapper -->
 
     </div>

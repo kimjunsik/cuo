@@ -38,7 +38,7 @@
 }
 
 #basicInfo {
-	width: 800px;
+	width: 100%;
 	height: 40px;
 	margin: auto;
 	background: lightgray;
@@ -46,7 +46,7 @@
 }
 
 #commandList {
-	width: 800px;
+	width: 100%;
 	height: 40px;
 	margin: auto;
 	background: lightgray;
@@ -54,7 +54,7 @@
 }
 
 #contentInfo {
-	width: 800px;
+	width: 100%;
 	height: 300px;
 	margin: auto;
 	border: 1px solid lightgray;
@@ -62,7 +62,7 @@
 
 #pageArea {
 	margin: auto;
-	width: 500px;
+	width: 100%;
 	height: 40px;
 	text-align: center;
 	clear: both;
@@ -74,18 +74,6 @@ h3, #td_command {
 	border-bottom: 1px dotted white;
 }
 
-table {
-	width: 800px;
-	margin: auto;
-}
-
-#meun {
-	border-bottom: 1px solid #8ed4e3;
-	border-width: 2px;
-	border-style: solid;
-	border-color: #07BFF7;
-	text-align: center;
-}
 
 h2 {
 	margin-left: 120px;
@@ -93,18 +81,11 @@ h2 {
 	color: #0070c0;
 }
 
-#logo {
-	width: 250px;
-	height: 100px;
-	margin: auto;
-}
-
 #margin {
-	position: absolute;
-	left: 330px;
-	top: 150px;
-	width : 600px;
-	height : 500px;
+margin-left:10%;
+margin-top:3%;
+	width : 90%;
+	height : 100%;
 }
 .left_time{
 	text-align: right;
@@ -288,31 +269,25 @@ h2 {
 	}
 %>
 
-	<div id="wrapper">
 
 		<!-- Sidebar -->
-		<div id="sidebar-wrapper">
-			<ul class="sidebar-nav">
-				<li class="sidebar-brand"><a href="#"> MenuList </a></li>
-				<li><a href="#">중식</a></li>
-				<li><a href="#">일식</a></li>
-				<li><a href="#">양식</a></li>
-				<li><a href="#">한식</a></li>
-				<li><a href="#">분식</a></li>
-				<li><a href="#">기타</a></li>
-			</ul>
-		</div>
 		<!-- /#sidebar-wrapper -->
 
 		<!-- Page Content -->
+		<div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-9">
+                    <div>&nbsp</div>
+		
 		<section id="margin">
-		<div class="well bs-component">
+		<div class="well bs-component" >
 		<form class="form-horizontal">
   <fieldset>
     <legend>${article.postTitle }</legend>
     <label class = "asdf">${article.postWriter }</label>&nbsp&nbsp&nbsp|&nbsp&nbsp&nbsp<label class = "left_time">${article.postRegistTime }</label>
       <div class="col-lg-15">
-        <textarea class="form-control" rows="10" id="textArea">${article.postContent }</textarea>
+        <textarea class="form-control" rows="17" id="textArea">${article.postContent }</textarea>
       </div>
    
     <div class="form-group">
@@ -349,7 +324,9 @@ h2 {
 </form>
 </div>
 	</section>	
-		
+		        </div>
+                </div>
+</div>        </div>
 		
 		
 		

@@ -255,10 +255,7 @@ dropdown{
 %>
     <div class="container theme-showcase" role="main" >
 
-      <!-- Main jumbotron for a primary marketing message or call to action -->
-      <div class="jumbotron">
-        
-      </div>
+        <div>&nbsp</div><br>
       
       <!-- <table class="table table-striped table-hover ">  테이블
   <thead>
@@ -273,7 +270,6 @@ dropdown{
   <%
   for(int i = 0;i < menuList.size();i++ ){
   %>
-       <ul class="nav nav-pills" >
   <%-- <li class="dropdown" >
     <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false">
      <%=menuList.get(i).getMenuName()%>  <span class="caret"></span>
